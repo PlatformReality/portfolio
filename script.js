@@ -197,7 +197,7 @@ const phoneInput = document.querySelector("#phone");
 const iti = window.intlTelInput(phoneInput, {
     initialCountry: "auto",
     geoIpLookup: callback => {
-        fetch("https://ipapi.co/json")
+        fetch("https://api.country.is/")
             .then(res => res.json())
             .then(data => callback(data.country_code))
             .catch(() => callback("in")); // fallback India
