@@ -113,12 +113,16 @@ const menu = document.querySelector(".menu");
 toggleBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
     toggleBtn.classList.toggle("active");
+    document.body.classList.toggle("no-scroll");
 });
 
-document.querySelectorAll(".menu li a").forEach(item => {
-    item.addEventListener("click", () => {
+/* Close menu when clicking a menu link */
+menu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") {
         menu.classList.remove("active");
-    });
+        toggleBtn.classList.remove("active");
+        document.body.classList.remove("no-scroll");
+    }
 });
 
 $(document).ready(function(){
