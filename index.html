@@ -11,6 +11,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+    (function () {
+        emailjs.init("8V1fEENDQZ_Fh2gTp");
+    })();
+    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
 
 </head>
@@ -20,14 +26,18 @@
     </div>
     <nav class="navbar">
         <div class="max-width">
-            <div class="logo"><a href="#">Platform<span> Reality</span></a></div>
+            <div class="logo">
+                <img src="images/image.png" alt="Platform Reality Logo">
+                <a href="#">
+                    <span>Platform Reality</span>
+                </a>
+            </div>
             <ul class="menu">
                 <li><a href="#home" class="menu-btn">Home</a></li>
                 <li><a href="#about" class="menu-btn">About</a></li>
-                <li><a href="#services" class="menu-btn">Services</a></li>
-                <li><a href="#skills" class="menu-btn">Skills</a></li>
-                <li><a href="#teams" class="menu-btn">Teams</a></li>
-                <li><a href="#contact" class="menu-btn">Contact</a></li>
+                <li><a href="#partners" class="menu-btn">Partners</a></li>
+                <li><a href="#teams" class="menu-btn">Leads</a></li>
+                <li><a href="#contact" class="menu-btn">Contact Us</a></li>
             </ul>
             <div class="menu-btn">
                 <i class="fas fa-bars"></i>
@@ -41,7 +51,7 @@
             <div class="home-content">
                 <div class="text-1">Hello, my name is</div>
                 <div class="text-2">Syed Sohail</div>
-                <div class="text-3">And I'm a <span class="typing"></span></div>
+                <div class="text-3">Business Head at <span class="typing"></span></div>
             </div>
         </div>
     </section>
@@ -52,10 +62,15 @@
             <h2 class="title">About me</h2>
             <div class="about-content">
                 <div class="column left">
-                    <img src="images/profile-1.jpeg" alt="">
+                    <h3 class="column-title">Who I Am</h3>
+                    <p>Hi, I’m <b>Syed Sohail</b>, a professional Real Estate Consultant dedicated to helping families and investors make confident property decisions.</p>
+                    <p>Over the years, I have successfully guided 570+ happy clients and facilitated the sale of <b>12Lakh+ sq.ft.</b> of residential and investment properties. I currently lead a team of <b>52+ professionals</b>,
+                    ensuring every client receives structured guidance, clear communication, and complete support throughout the buying journey.</p> 
+                    <p>My expertise covers property evaluation, financial planning, pricing analysis, and market insights, so you don’t just buy a property — <b>you make a smart investment.</b></p>
+                    <p>I believe buying a property is one of the most important decisions in life. That’s why I focus on transparency, honesty, and long-term relationships, ensuring you feel secure and well-informed at every step.</p>
                 </div>
                 <div class="column right">
-                    <div class="text">I'm Syed Sohail and I'm a <span class="typing-2"></span></div>
+                    <h3 class="column-title">Services I provide</h3>
                     <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.
                     </p>
@@ -65,92 +80,93 @@
     </section>
 
     <!-- services section start -->
+    <div id="partners">
     <section class="services" id="services">
-        <div class="max-width">
-            <h2 class="title">Services we offer</h2>
-            <div class="serv-content">
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-paint-brush"></i>
-                        <div class="text">Web Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                    </div>
+    <div class="max-width">
+        <h2 class="title">Partnered Developers</h2>
+
+        <div class="partners-wrapper">
+
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+
+            <div class="serv-content partners-carousel" id="partnersCarousel">
+                <div class="carousel-track" id="carouselTrack">
+
+                    <a href="https://www.google.com" target="_blank" class="partner-card">
+                        <img src="images/partners/google.png" alt="Google">
+                    </a>
+                    <a href="https://www.meta.com" target="_blank" class="partner-card">
+                        <img src="images/partners/meta.png" alt="Meta">
+                    </a>
+                    <a href="https://www.amazon.com" target="_blank" class="partner-card">
+                        <img src="images/partners/amazon.png" alt="Amazon">
+                    </a>
+                    <a href="https://www.microsoft.com" target="_blank" class="partner-card">
+                        <img src="images/partners/microsoft.png" alt="Microsoft">
+                    </a>
+                    <a href="https://www.netflix.com" target="_blank" class="partner-card">
+                        <img src="images/partners/netflix.png" alt="Netflix">
+                    </a>
+                    <a href="https://www.spotify.com" target="_blank" class="partner-card">
+                        <img src="images/partners/spotify.png" alt="Spotify">
+                    </a>
+
                 </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="text">Advertising</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <i class="fas fa-code"></i>
-                        <div class="text">Apps Design</div>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quia sunt, quasi quo illo enim.</p>
-                    </div>
-                </div>
-               </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- skills section start -->
     <section class="skills" id="skills">
-        <div class="max-width">
-            <h2 class="title">My skills</h2>
-            <div class="skills-content">
-                <div class="column left">
-                    <div class="text">My creative skills & experiences.</div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ratione error est recusandae consequatur, iusto illum deleniti quidem impedit, quos quaerat quis minima sequi. Cupiditate recusandae laudantium esse, harum animi aspernatur quisquam et delectus ipsum quam alias quaerat? Quasi hic quidem illum. Ad delectus natus aut hic explicabo minus quod.</p>
-                </div>
-                <div class="column right">
-                    <div class="bars">
-                        <div class="info">
-                            <span>HTML</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="line html"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>CSS</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="line css"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>JavaScript</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="line js"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>PHP</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="line php"></div>
-                    </div>
-                    <div class="bars">
-                        <div class="info">
-                            <span>MySQL</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="line mysql"></div>
-                    </div>
+    <div class="max-width">
+        <h2 class="title">Partnered Banks</h2>
+
+        <div class="partners-wrapper">
+
+            <button class="carousel-btn prev">&#10094;</button>
+            <button class="carousel-btn next">&#10095;</button>
+
+            <div class="serv-content partners-carousel">
+                <div class="carousel-track">
+
+                    <a href="https://www.google.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/google.png" alt="Google">
+                    </a>
+                    <a href="https://www.meta.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/meta.png" alt="Meta">
+                    </a>
+                    <a href="https://www.amazon.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/amazon.png" alt="Amazon">
+                    </a>
+                    <a href="https://www.microsoft.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/microsoft.png" alt="Microsoft">
+                    </a>
+                    <a href="https://www.netflix.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/netflix.png" alt="Netflix">
+                    </a>
+                    <a href="https://www.spotify.com" target="_blank" class="partner-logo">
+                        <img src="images/partners/spotify.png" alt="Spotify">
+                    </a>
+
                 </div>
             </div>
+
         </div>
-    </section>
+    </div>
+</section>
+</div>
+
 
     <!-- teams section start -->
-    <section class="teams" id="teams">
+    <section class="new-team" id="teams">
         <div class="max-width">
-            <h2 class="title">My teams</h2>
-            <div class="carousel owl-carousel">
-                <div class="card">
+        <h2 class="title">Lead By Directors</h2>
+        <div class="serv-content">
+            <div class="card">
                     <div class="box">
                         <img src="images/profile-1.jpeg" alt="">
                         <div class="text">Someone name</div>
@@ -160,27 +176,6 @@
                 <div class="card">
                     <div class="box">
                         <img src="images/profile-2.jpeg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-3.jpeg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-4.jpeg" alt="">
-                        <div class="text">Someone name</div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="box">
-                        <img src="images/profile-5.jpeg" alt="">
                         <div class="text">Someone name</div>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     </div>
@@ -202,46 +197,48 @@
                             <i class="fas fa-user"></i>
                             <div class="info">
                                 <div class="head">Name</div>
-                                <div class="sub-title">Prakash Shahi</div>
+                                <div class="sub-title">Syed Sohail</div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
                                 <div class="head">Address</div>
-                                <div class="sub-title">Surkhet, Nepal</div>
+                                <div class="sub-title">Hyderabad, India</div>
                             </div>
                         </div>
                         <div class="row">
                             <i class="fas fa-envelope"></i>
                             <div class="info">
                                 <div class="head">Email</div>
-                                <div class="sub-title">abc@gmail.com</div>
+                                <div class="sub-title">info@platformreality.com</div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
-                        <div class="fields">
-                            <div class="field name">
-                                <input type="text" placeholder="Name" required>
-                            </div>
-                            <div class="field email">
-                                <input type="text" placeholder="Contact No." required>
-                            </div>
-                        </div>
-                        <div class="field">
-                            <input type="text" placeholder="Subject" required>
-                        </div>
-                        <div class="field textarea">
-                            <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
-                        </div>
-                        <div class="button-area">
-                            <button type="submit">Send message</button>
-                        </div>
-                    </form>
+                    <form id="contact-form">
+                    <div class="field">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" name="contact_num" placeholder="Contact Number" required>
+                    </div>
+
+                    <div class="field">
+                        <input type="text" name="subject" placeholder="Subject" required>
+                    </div>
+
+                    <div class="field textarea">
+                        <textarea name="message" placeholder="Your Message..." required></textarea>
+                    </div>
+
+                    <div class="button-area">
+                        <button type="submit">Send Message</button>
+                    </div>
+                </form>
                 </div>
             </div>
         </div>
@@ -249,7 +246,7 @@
 
     <!-- footer section start -->
     <footer>
-        <span>Created By <a href="https://www.codingnepalweb.com">CodingNepal</a> | <span class="far fa-copyright"></span> 2020 All rights reserved.</span>
+        <span>Created By <a href="">Platform reality</a> | <span class="far fa-copyright"></span> 2026 All rights reserved.</span>
     </footer>
 
     <script src="script.js"></script>
