@@ -92,7 +92,7 @@ section .title::after{
 
     /* Reduce navbar height */
     .navbar{
-        padding: 8px 0;
+        padding: 6px 0;
     }
 
     /* Make logo + hamburger align */
@@ -103,13 +103,13 @@ section .title::after{
     }
 
     /* Reduce logo size */
-    .navbar .logo img{
-        height: 28px;
+    .navbar .max-width .logo img{
+        height: 26px;
+        width:auto;
     }
 
-    .navbar .logo a{
+    .navbar .logo a span{
         font-size: 20px;
-        top: 0;
     }
 
     /* Show hamburger */
