@@ -107,6 +107,20 @@ document.getElementById("contact-form").addEventListener("submit", function (e) 
     );
 });
 
+const toggleBtn = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+
+toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
+    toggleBtn.classList.toggle("active");
+});
+
+document.querySelectorAll(".menu li a").forEach(item => {
+    item.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
+});
+
 $(document).ready(function(){
     $(window).scroll(function(){
         // sticky navbar on scroll script

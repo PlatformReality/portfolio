@@ -78,6 +78,83 @@ section .title::after{
     transform: translateX(-50%);
 }
 
+/* Hide hamburger on desktop */
+.menu-toggle{
+    display: none;
+    font-size: 24px;
+    color: #BD8F25;
+    cursor: pointer;
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px){
+
+    /* Reduce navbar height */
+    .navbar{
+        padding: 8px 0;
+    }
+
+    /* Make logo + hamburger align */
+    .navbar .max-width{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* Reduce logo size */
+    .navbar .logo img{
+        height: 28px;
+    }
+
+    .navbar .logo a{
+        font-size: 20px;
+        top: 0;
+    }
+
+    /* Show hamburger */
+    .menu-toggle{
+        display: block;
+    }
+
+    /* Mobile menu style */
+    .navbar .menu{
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        padding: 15px 0;
+        display: none;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Active state */
+    .navbar .menu.active{
+        display: flex;
+    }
+
+    /* Menu items */
+    .navbar .menu li{
+        display: block;
+        margin: 12px 0;
+    }
+
+    .navbar .menu li a{
+        margin-left: 0;
+        font-size: 18px;
+    }
+}
+.menu-toggle i{
+    transition: 0.3s;
+}
+
+.menu-toggle.active i{
+    transform: rotate(90deg);
+}
+
 /* navbar styling */
 .navbar{
     position: fixed;
