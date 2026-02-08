@@ -303,12 +303,12 @@ section .title::after{
 }
 @media (max-width: 768px) {
     .home {
-        background: url("images/banner.jpg") no-repeat 95% center;
+        background: url("images/banner.jpg") no-repeat 95% 40%;
         background-size: cover;
         background-attachment: scroll;
     }
     .home .home-content {
-        margin-top: 300px;  /* 👈 push text down */
+        margin-top: 330px;  /* 👈 push text down */
     }
     .home .home-content .text-1{
         font-size: 23px;
@@ -882,6 +882,12 @@ footer span a:hover{
     z-index: 2;
     pointer-events: none;
 }
+@media (max-width: 768px) {
+    .partners-carousel::before,
+    .partners-carousel::after {
+        display:none /* narrower fade on mobile */
+    }
+}
 
 .partners-carousel::before {
     left: 0;
@@ -938,7 +944,7 @@ footer span a:hover{
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: rgba(0,0,0,0.6);
+    background: transparent;
     color: #fff;
     font-size: 22px;
     cursor: pointer;

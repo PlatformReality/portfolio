@@ -1,8 +1,6 @@
 document.querySelectorAll(".partners-wrapper").forEach(wrapper => {
 
     const track = wrapper.querySelector(".carousel-track");
-    const prevBtn = wrapper.querySelector(".prev");
-    const nextBtn = wrapper.querySelector(".next");
 
     /* clone once for infinite loop */
     track.innerHTML += track.innerHTML;
@@ -20,18 +18,6 @@ document.querySelectorAll(".partners-wrapper").forEach(wrapper => {
         track.style.animationPlayState = "running";
     }
 
-    /* arrows */
-    prevBtn.addEventListener("click", () => {
-        pauseAutoScroll();
-        currentTranslate += 180;
-        track.style.transform = `translateX(${currentTranslate}px)`;
-    });
-
-    nextBtn.addEventListener("click", () => {
-        pauseAutoScroll();
-        currentTranslate -= 180;
-        track.style.transform = `translateX(${currentTranslate}px)`;
-    });
 
     /* mouse drag */
     track.addEventListener("mousedown", e => {
