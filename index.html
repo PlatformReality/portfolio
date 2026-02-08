@@ -17,6 +17,9 @@
     })();
     </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+
 
 </head>
 <body>
@@ -220,26 +223,84 @@
                 <div class="column right">
                     <div class="text">Message me</div>
                     <form id="contact-form">
-                    <div class="field">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
 
-                    <div class="field">
-                        <input type="text" name="contact_num" placeholder="Contact Number" required>
-                    </div>
+                        <!-- Name & Contact -->
+                        <div class="fields">
+                            <div class="field name">
+                                <input type="text" name="name" placeholder="Your Name" required>
+                            </div>
 
-                    <div class="field">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
+                            <div class="field email">
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    name="contact_num"
+                                    placeholder="Contact Number"
+                                    required
+                                >
+                            </div>
+                        </div>
 
-                    <div class="field textarea">
-                        <textarea name="message" placeholder="Your Message..." required></textarea>
-                    </div>
+                        <!-- Budget & Property Type (SIDE BY SIDE) -->
+                        <div class="fields">
+                            <div class="field">
+                                <select name="budget" required>
+                                    <option value="" disabled selected>Expected Budget</option>
+                                    <option value="Below 50 Lakhs">Below 50 Lakhs</option>
+                                    <option value="50 Lakhs to 1 Crore">50 Lakhs to 1 Crore</option>
+                                    <option value="1 Crore to 1.5 Crore">1 Crore to 1.5 Crore</option>
+                                    <option value="1.5 Crore to 2-2.5 Crores">1.5 Crore to 2-2.5 Crores</option>
+                                    <option value="2.5 Crore to 3-3.5 Crores">2.5 Crore to 3-3.5 Crores</option>
+                                    <option value="3.5 Crores and Above">3.5 Crores and Above</option>
+                                </select>
+                            </div>
 
-                    <div class="button-area">
-                        <button type="submit">Send Message</button>
-                    </div>
-                </form>
+                            <div class="field">
+                                <select name="property_type" required>
+                                    <option value="" disabled selected>Choose Property Type</option>
+                                    <option value="flat">Flat</option>
+                                    <option value="Villa">Villa</option>
+                                    <option value="Plot">Plot</option>
+                                    <option value="Commercial">Commercial land</option>
+                                    <option value="Commercial Building">Commercial Building</option>
+                                    <option value="Independent House">Independent House</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="fields">
+                            <div class="field">
+                                <select name="city" required>
+                                    <option value="" disabled selected>Choose City</option>
+                                    <option value="Hyderabad">Hyderabad</option>
+                                    <option value="Bangalore">Bangalore</option>
+                                    <option value="Chennai">Chennai</option>
+                                    <option value="Mumbai">Mumbai</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Kolkata">Kolkata</option>
+                                    <option value="Pune">Pune</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <div class="field email">
+                                <input type="text" name="location" placeholder="Enter Location" required>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="field textarea">
+                            <textarea name="message" placeholder="Your Message..." required></textarea>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="button-area">
+                            <button type="submit">Send Message</button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>

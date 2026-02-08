@@ -191,3 +191,20 @@ $(document).ready(function(){
         }
     });
 });
+
+const phoneInput = document.querySelector("#phone");
+
+const iti = window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    geoIpLookup: callback => {
+        fetch("https://ipapi.co/json")
+            .then(res => res.json())
+            .then(data => callback(data.country_code))
+            .catch(() => callback("in")); // fallback India
+    },
+    utilsScript:
+        "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js"
+});
+document.getElementById("contact-form").addEventListener("submit", function () {
+    const fullNumber = iti.getNumber();
+});
