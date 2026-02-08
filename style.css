@@ -970,7 +970,6 @@ footer span a:hover{
     max-height: 70px;
     max-width: 140px;
     object-fit: contain;
-    opacity: 0.85;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -983,9 +982,6 @@ footer span a:hover{
 /* spacing between logos */
 .carousel-track {
     gap: 50px;
-}
-.partner-logo img {
-    filter: grayscale(100%);
 }
 
 .partner-logo:hover img {
@@ -1154,7 +1150,7 @@ footer span a:hover{
     height: 170px;
     margin: 0 auto 30px;
     border-radius: 50%;
-    border: 6px solid #e11d48;
+    border: 6px solid #BD8F25;
     overflow: hidden;
 }
 
