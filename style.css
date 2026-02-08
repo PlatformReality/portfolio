@@ -499,190 +499,6 @@ section .title::after{
 .skills-content .right .mysql::before{
     width: 70%;
 }
-
-/* new-new-team section styling */
-.new-team .title::after{
-    background: #111;
-    content: "Backed Up By";
-    position: absolute;
-    left: 50%;
-    bottom: -5px;
-    transform: translateX(-50%);
-    font-size: 16px;
-    color: #BD8F25;
-}
-.new-team .carousel .card{
-    background: #222;
-    border-radius: 6px;
-    padding: 25px 35px;
-    text-align: center;
-    overflow: hidden;
-    transition: all 0.3s ease;
-}
-.new-team .carousel .card:hover{
-    background: #BD8F25;
-}
-.new-team .carousel .card .box{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-.new-team .carousel .card:hover .box{
-    transform: scale(1.05);
-}
-.new-team .carousel .card .text{
-    font-size: 25px;
-    font-weight: 500;
-    margin: 10px 0 7px 0;
-}
-.new-team .carousel .card img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 5px solid #BD8F25;
-    transition: all 0.3s ease;
-}
-.new-team .carousel .card:hover img{
-    border-color: #fff;
-}
-/* ===== NEW-TEAM CLEAN CARD LAYOUT ===== */
-.new-team{
-    overflow: visible;
-}
-
-.new-team .serv-content{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    width: 100%;
-}
-
-/* Card wrapper */
-.new-team .card{
-    width: 100%;
-    max-width: 300px;
-    background: #222;
-    border-radius: 10px;
-    padding: 24px 20px;
-    box-sizing: border-box;
-    overflow: hidden;
-    text-align: center;
-}
-
-/* Inner box */
-.new-team .card .box{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/* Image */
-.new-team .card img{
-    width: 120px;
-    height: 120px;
-    max-width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #BD8F25;
-    margin-bottom: 12px;
-}
-
-/* Name */
-.new-team .card .text{
-    font-size: 22px;
-    font-weight: 500;
-    color: #fff;
-    margin-bottom: 6px;
-    word-break: break-word;
-}
-
-/* Description */
-.new-team .card p{
-    font-size: 14px;
-    line-height: 1.5;
-    color: #ccc;
-    max-width: 100%;
-    word-break: break-word;
-}
-
-/* ===== HARD MOBILE OVERFLOW FIX FOR NEW-TEAM ===== */
-@media (max-width: 768px){
-
-    /* Force safe box sizing everywhere */
-    .new-team,
-    .new-team *,
-    .new-team *::before,
-    .new-team *::after{
-        box-sizing: border-box;
-    }
-    .new-team{
-        overflow: visible;
-    }
-
-    /* Stack cards cleanly */
-    .new-team .serv-content{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        width: 100%;
-        overflow-x: hidden;
-        overflow: visible;
-    }
-
-    /* Card wrapper */
-    .new-team .card{
-        width: 100%;
-        max-width: 100%;
-        padding: 24px 20px;
-        border-radius: 14px;
-        box-sizing: border-box;
-    }
-
-    /* Actual visible card */
-    .new-team .carousel .card{
-        width: 100%;
-        padding: 16px;
-        overflow: visible;
-    }
-
-    /* Inner box */
-    .new-team .carousel .card .box{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    /* Image containment */
-    .new-team .carousel .card img{
-        width: 110px;
-        height: 110px;
-        max-width: 100%;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 0 auto 10px;
-        display: block;
-    }
-
-    /* Text containment */
-    .new-team .carousel .card .text,
-    .new-team .carousel .card p{
-        max-width: 100%;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-}
-.new-team .carousel{
-    display: none;
-}
 @media (max-width: 768px){
     .max-width{
         max-width: 100%;
@@ -1226,4 +1042,117 @@ footer span a:hover{
 /* focus effect (optional, match others) */
 .iti input:focus {
     border-color: black;
+}
+/* section background */
+.directors-section {
+    background: radial-gradient(circle at top, #1b1b1b, #000);
+    padding: 100px 0;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* container */
+.directors-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+/* main title */
+.directors-title {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* subtitle with lines */
+.directors-subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 70px;
+}
+
+.directors-subtitle span {
+    width: 60px;
+    height: 2px;
+    background: #fff;
+}
+
+.directors-subtitle p {
+    color: #BD8F25;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* cards grid */
+.directors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    align-items: stretch;
+}
+
+/* card */
+.director-card {
+    background: #222;
+    border-radius: 18px;
+    padding: 45px 35px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.director-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+/* avatar */
+.director-avatar {
+    width: 170px;
+    height: 170px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    border: 6px solid #e11d48;
+    overflow: hidden;
+}
+
+.director-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* text */
+.director-card h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.director-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #d1d1d1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .directors-title {
+        font-size: 32px;
+    }
+
+    .directors-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .director-card {
+        padding: 40px 25px;
+    }
+
+    .director-avatar {
+        width: 140px;
+        height: 140px;
+    }
 }
